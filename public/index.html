@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en"> 
+
+    <head>
+        <title>Kecleon Shop</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+            
+        <main>
+            <aside id="advice">
+
+                <p>
+                    <h3>Leave Advice for Fellow Explorers!</h3>
+
+                    <form>
+                        <input id="name-1" type="text"placeholder="Name"/>
+                        <input id="url_pic" type="url" placeholder="Photo url"/>
+                        <textarea id="textarea" placeholder="Start Typing Here"></textarea>
+                        <input id="submit" type="submit" value="Post"/>
+                        
+                        
+                    </form>
+                    <div id="post">
+                        <p class="comment" id="display-pic"></p>
+                        <p class="comment" id="display-name"></p>
+                        <p class="comment" id="display-comment"></p>
+                        
+                    </div>
+                </p>
+
+            </aside>
+        
+        <section id="shop">
+            
+            <div id="cart">
+                <img src="https://drive.google.com/uc?export=view&id=10GR34OE-SuYBYgxW8b07OnW3GghFEZEe"/>
+                <p>Items in Bag: <span id="item-count" > 0 </span>
+            </div> 
+
+            <nav id="shop-tabs">
+               
+                    <button id="rest-button">Restoring Items</button>
+                    <button id="seed-button">Seeds</button>
+                    <button id="orb-button">Orbs</button>
+                    <button id="throw-button">Throwing Items</button>
+                    <button id="wand-button">Wands</button>
+                    <button id="wear-button">Wearable Items</button>
+                    
+            </nav>
+                
+
+            <div id="item-display">
+
+                    <figure id="item-card">
+
+                        <img alt="item" id="item-pic" />
+                        <div id="item-name">name</div>
+
+                        <figcaption>
+                        <button class="subtract">-</button>
+                        <div id="item-price">
+                            <div>(G)</div>
+                        </div>
+                        <button class="add">+</button>
+                        </figcaption>
+
+                    </figure>
+
+                    
+                
+            </div>
+
+                <button class="bkwd-arrow"> <<<) </button>
+                <button class="frwd-arrow"> (>>> </button>
+
+            </section>
+        </main>
+
+        <footer>
+            
+            <span>
+                <img id="kecleon"src="https://drive.google.com/uc?export=view&id=1MruJYS57R-Pq-EwpjgZJabJDQ6_QMuOE">
+            </span>
+
+            <div id="random-dialog">
+
+            </div>
+
+            <div id="gold">1,500 (G)</div>
+
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+
+
+</html>
