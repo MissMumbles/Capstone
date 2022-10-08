@@ -9,7 +9,6 @@ const forwardBtn=document.querySelector('#frwd-arrow')
 const backwardBtn=document.querySelector('#bkwd-arrow')
 
 const commentBoard=document.querySelector('#post')
-
 const postBtn= document.querySelector('form')
 
 const restBtn= document.querySelector('#rest-button')
