@@ -18,7 +18,7 @@ module.exports = {
             sequelize.query(`
             drop table if exists items;
             drop table if exists posts;
-
+            
             create table items(
                 id serial primary key,
                 image_url varchar(255),

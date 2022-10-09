@@ -1,4 +1,3 @@
-
 const counterText=document.querySelector('#item-count')
 const plusBtn= document.querySelectorAll('.add')
 const subBtn= document.querySelectorAll('.subtract')
@@ -17,13 +16,13 @@ const wandBtn=document.querySelector('#wand-button')
 const wearBtn=document.querySelector('#wear-button')
 
 const itemDisplay=document.querySelector('#item-display')
-// const itemPic=document.querySelector('#item-pic')
-// const itemName=document.querySelector('#item-name')
-// const itemPrice=document.querySelector('#item-price')
+
+const kecBtn=document.querySelector('#kecleon')
 
 const baseURL='http://localhost:4000'
-
 let count=0
+
+
 for (var i=0;i<plusBtn.length; i++){
     plusBtn[i].addEventListener('click',()=>{
         count++
@@ -48,7 +47,10 @@ const getDialog = () => {
     });
 };
 
+function getEightItems(){
+    
 
+}
 function deletePost(id){
     axios.delete(`${baseURL}/comments/${id}`)
     .then(()=> getComments())
@@ -62,13 +64,13 @@ function getRestItems(){
     axios.get(`${baseURL}/items/Restoring`)
         .then(res=>{
             res.data.forEach(item=>{
-            let itemCard=`<figure id="item-card">
+            let itemCard=`<figure id="item-card" >
 
             <img alt="item" id="item-pic" src="${item.photo}" />
             <div id="item-name">${item.name}</div>
 
             <figcaption>
-            <button class="subtract">-</button>
+            <button class= "subtract" >-</button>
             <div id="item-price">
                 <div>${item['price']}(G)</div>
             </div>
@@ -234,8 +236,6 @@ function getComments(){
 function submitHandler(e){
     e.preventDefault()
 
-    console.log('test')
-
     let picURL = document.querySelector('#url_pic')
     let nameInput= document.querySelector('#name-1')
     let textArea=document.querySelector('textarea')
@@ -255,6 +255,7 @@ function submitHandler(e){
 
     
 }
+
 
 getComments()
 getRestItems()

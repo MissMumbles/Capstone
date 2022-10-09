@@ -12,6 +12,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
 })
 
 module.exports={
+    
 
     getRestItems:(req,res)=>{
         sequelize.query(`
