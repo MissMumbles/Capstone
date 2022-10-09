@@ -3,8 +3,6 @@ const counterText=document.querySelector('#item-count')
 const plusBtn= document.querySelectorAll('.add')
 const subBtn= document.querySelectorAll('.subtract')
 
-const kecBtn=document.querySelector('#kecleon')
-
 const forwardBtn=document.querySelector('#frwd-arrow')
 const backwardBtn=document.querySelector('#bkwd-arrow')
 
