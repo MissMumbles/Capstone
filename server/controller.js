@@ -21,7 +21,6 @@ module.exports={
         price 
         FROM items 
         WHERE category='Restoring'
-        LIMIT 8;
         `)
 
         .then((dbRes)=>{
@@ -37,7 +36,7 @@ module.exports={
         price 
         FROM items
         WHERE category='Seed'
-        LIMIT 8;
+        ;
         `)
         .then((dbRes)=>{
             res.status(200).send(dbRes[0])
@@ -51,8 +50,7 @@ module.exports={
         item_name AS name,
         price 
         FROM items 
-        WHERE category='Orb'
-        LIMIT 8;
+        WHERE category='Orb';
         `)
         .then((dbRes)=>{
             res.status(200).send(dbRes[0])
@@ -66,8 +64,7 @@ module.exports={
         item_name AS name,
         price 
         FROM items 
-        WHERE category='Throwing'
-        LIMIT 8;
+        WHERE category='Throwing';
         `)
         .then((dbRes)=>{
             res.status(200).send(dbRes[0])
@@ -81,8 +78,7 @@ module.exports={
         item_name AS name,
         price 
         FROM items 
-        WHERE category='Wand'
-        LIMIT 8;
+        WHERE category='Wand';
         `)
         .then((dbRes)=>{
             res.status(200).send(dbRes[0])
@@ -96,8 +92,7 @@ module.exports={
         item_name AS name,
         price 
         FROM items 
-        WHERE category='Wearable'
-        LIMIT 8;
+        WHERE category='Wearable';
         `)
         .then((dbRes)=>{
             res.status(200).send(dbRes[0])

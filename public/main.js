@@ -2,9 +2,6 @@ const counterText=document.querySelector('#item-count')
 const plusBtn= document.querySelectorAll('.add')
 const subBtn= document.querySelectorAll('.subtract')
 
-const forwardBtn=document.querySelector('#frwd-arrow')
-const backwardBtn=document.querySelector('#bkwd-arrow')
-
 const commentBoard=document.querySelector('#post')
 const postBtn= document.querySelector('form')
 
@@ -16,13 +13,11 @@ const wandBtn=document.querySelector('#wand-button')
 const wearBtn=document.querySelector('#wear-button')
 
 const itemDisplay=document.querySelector('#item-display')
-
 const kecBtn=document.querySelector('#kecleon')
 
 const baseURL='http://localhost:4000'
+
 let count=0
-
-
 for (var i=0;i<plusBtn.length; i++){
     plusBtn[i].addEventListener('click',()=>{
         count++
@@ -47,10 +42,7 @@ const getDialog = () => {
     });
 };
 
-function getEightItems(){
-    
 
-}
 function deletePost(id){
     axios.delete(`${baseURL}/comments/${id}`)
     .then(()=> getComments())

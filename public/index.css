@@ -39,8 +39,7 @@ body{
     width: 1000px;
     justify-content: space-evenly;
     align-items: center;
-
-    
+    overflow: scroll; 
 }
 #cart{
     height: 100px;
@@ -104,29 +103,6 @@ section{
     position: relative;
 }
 
-
-#arrow:hover{
-    transform:scale(1.05,1.05);
-}
-#arrow:active{
-    transform:scale(1.025,1.025);
-}
-#arrow{
-    display: inline;
-    height: 45px;
-    width: 80px;
-    position: relative;
-    top:0px;
-    left:450px;
-    background-color:rgb(14, 82, 60);
-    color: rgb(152, 218, 67); 
-    border: solid green 7px;
-    border-bottom-left-radius: 40%;
-    border-bottom-right-radius: 40%;
-    transition:0.5s;
-   cursor:pointer;
-}
-
 #item-pic{
     width: 100px ;
     height: 100px;
@@ -143,7 +119,6 @@ footer{
     align-items: center;
 }
 
-
 #kecleon{
     height: 180px;
     width: 180px;
@@ -156,22 +131,13 @@ footer{
 }
 #kecleon:hover{
     transform:scale(1.05,1.05);
+    content: url('https://drive.google.com/uc?export=view&id=11oq98NfFV8bwK29raR7hCqtc4cw6Ar0H');
 }
 #kecleon:active{
     content: url('https://drive.google.com/uc?export=view&id=11oq98NfFV8bwK29raR7hCqtc4cw6Ar0H');
-}
-#gold{
-    border-radius: 35%;
-    height: 60px;
-    width: 150px;
-    border: solid 8px rgb(209, 170, 63);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-   
 
+}
+ 
 img{
     height: 100%;
     width: 100%;
