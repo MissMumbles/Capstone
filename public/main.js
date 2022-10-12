@@ -18,21 +18,18 @@ const kecBtn=document.querySelector('#kecleon')
 const baseURL='http://localhost:4000'
 
 let count=0
-for (var i=0;i<plusBtn.length; i++){
-    plusBtn[i].addEventListener('click',()=>{
-        count++
-        counterText.textContent=count
-    })
-} 
-for (var i=0;i<subBtn.length; i++){
-    subBtn[i].addEventListener('click',()=>{
-        if(count<= 0){
-            count=0
-        }else
-        count--
-        counterText.textContent=count
-    })
-} 
+
+const removeFromBag=()=> {
+    if(count<= 0){
+        count=0
+    }else
+    count--
+    counterText.textContent=count
+}
+const addToBag =()=> {
+    count++
+    counterText.textContent=count
+}
 
 const getDialog = () => {
     axios.get("http://localhost:4000/dialog")
@@ -62,11 +59,11 @@ function getRestItems(){
             <div id="item-name">${item.name}</div>
 
             <figcaption>
-            <button class= "subtract" >-</button>
+            <button onclick="removeFromBag()" class= "subtract" >-</button>
             <div id="item-price">
                 <div>${item['price']}(G)</div>
             </div>
-            <button class="add">+</button>
+            <button onclick="addToBag()" class="add">+</button>
             </figcaption>
 
         </figure>`
@@ -88,11 +85,11 @@ function getSeeds(){
             <div id="item-name">${item.name}</div>
 
             <figcaption>
-            <button class="subtract">-</button>
+            <button onclick="removeFromBag()" class= "subtract" >-</button>
             <div id="item-price">
                 <div>${item['price']}(G)</div>
             </div>
-            <button class="add">+</button>
+            <button onclick="addToBag()" class="add">+</button>
             </figcaption>
 
         </figure>`
@@ -114,11 +111,11 @@ function getOrbs(){
             <div id="item-name">${item.name}</div>
 
             <figcaption>
-            <button class="subtract">-</button>
+            <button onclick="removeFromBag()" class= "subtract" >-</button>
             <div id="item-price">
                 <div>${item['price']}(G)</div>
             </div>
-            <button class="add">+</button>
+            <button onclick="addToBag()" class="add">+</button>
             </figcaption>
 
         </figure>`
@@ -140,11 +137,11 @@ function getThowItems(){
             <div id="item-name">${item.name}</div>
 
             <figcaption>
-            <button class="subtract">-</button>
+            <button onclick="removeFromBag()" class= "subtract" >-</button>
             <div id="item-price">
                 <div>${item['price']}(G)</div>
             </div>
-            <button class="add">+</button>
+            <button onclick="addToBag()" class="add">+</button>
             </figcaption>
 
         </figure>`
@@ -166,11 +163,11 @@ function getWands(){
             <div id="item-name">${item.name}</div>
 
             <figcaption>
-            <button class="subtract">-</button>
+            <button onclick="removeFromBag()" class= "subtract" >-</button>
             <div id="item-price">
                 <div>${item['price']}(G)</div>
             </div>
-            <button class="add">+</button>
+            <button onclick="addToBag()" class="add">+</button>
             </figcaption>
 
         </figure>`
@@ -192,11 +189,11 @@ function getWearItems(){
             <div id="item-name">${item.name}</div>
 
             <figcaption>
-            <button class="subtract">-</button>
+            <button onclick="removeFromBag()" class= "subtract" >-</button>
             <div id="item-price">
                 <div>${item['price']}(G)</div>
             </div>
-            <button class="add">+</button>
+            <button onclick="addToBag()" class="add">+</button>
             </figcaption>
 
         </figure>`
@@ -214,7 +211,7 @@ function getComments(){
         .then(res=> {
             res.data.forEach(comment=>{
                 let commentCard=`<div id="post">
-                     <img alt="display-pic" class="comment" src= "${comment.photo}" id="display-pic"></p>
+                     <img alt="display" class="comment" src= "${comment.photo}" id="display-pic"></p>
                      <p class="comment" id="display-name">${comment.name}</p>
                      <p class="comment" id="display-comment">${comment.posting}</p>
                      <button onclick="deletePost(${comment['id']})">Delete</button>
