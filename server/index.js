@@ -5,7 +5,7 @@ const app = express();
 const{SERVER_PORT}=process.env
 
 const{seed} = require('./seed.js')
-const{ getComments,getRestItems, getSeeds, getOrbs, getWands, getWearItems, getEightItems,getDialog, createPost, deletePost, getThowItems }=require('./controller.js')
+const{ getComments,getRestItems, getSeeds, getOrbs, getWands, getWearItems, getDialog, createPost, deletePost, getThowItems }=require('./controller.js')
 
 app.use(cors());
 app.use(express.json());
