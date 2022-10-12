@@ -36,9 +36,19 @@ module.exports = {
 
             insert into posts(user_name, photo_url, comment)
             values
-            ('Gengar','https://drive.google.com/uc?export=view&id=1bbASiOZ0XPYmqK_it17qYeHqA1z2Ez-g',
+            ('Kecleon',
+            'https://drive.google.com/uc?export=view&id=1bMfXbZ6qFN0W6gbeJEoEewguEL7g45u8',
+            'Buy more items!'),
+
+            ('Gengar',
+            'https://drive.google.com/uc?export=view&id=1bbASiOZ0XPYmqK_it17qYeHqA1z2Ez-g',
             'Join Team Meanies! 
-            Kekheh!');
+            Kekheheheheh!'),
+            
+            ('Ekans',
+            'https://drive.google.com/uc?export=view&id=1eldOGVnpMOQa9wMfjqC26gEZtPMe2pmW',
+             'Eat Grimy Food! Heheheh...');
+
 
             insert into items(image_url, item_name, category, price)
             values
@@ -286,7 +296,7 @@ module.exports = {
             'Restoring', 
             250),
 
-            ('https://drive.google.com/file/d/1dkYWdugUHB-_AMNLKJsAIBlETm1AAy5K/view',
+            ('https://drive.google.com/uc?export=view&id=1dkYWdugUHB-_AMNLKJsAIBlETm1AAy5K',
             'Grimy Food', 
             'Restoring',
             1),
@@ -565,7 +575,7 @@ module.exports = {
                 'Wand', 
                 200),
 
-            ('https://drive.google.com/file/d/1nynbFUqTJ2k7G4Ry5wEQ5YztZV5QyfD9/view',
+            ('https://drive.google.com/uc?export=view&id=1nynbFUqTJ2k7G4Ry5wEQ5YztZV5QyfD9',
             'Switcher Wand',
                 'Wand', 
                 150),
